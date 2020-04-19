@@ -1,7 +1,14 @@
 /* Write a Program to Flatten a given n-dimensional array */
 
-const flatten = () => {
+const flatten = (array) => {
 	// Write your code here
+	if(Array.isArray(array)){
+		var output=array.flat(Infinity);
+		return output;
+	}
+	else{
+		return null;
+	}
 };
 
 /* For example,

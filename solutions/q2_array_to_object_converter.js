@@ -2,8 +2,20 @@
 	based on a given key */
 
 
-const convert = () => {
+const convert = (array, key) => {
 	// Write your code here
+	const initialValue = {};
+	if(Array.isArray(array)){
+    return array.reduce((obj, item) => {
+        return {
+          ...obj,
+          [item[key]]: item,
+        };
+      }, initialValue);
+    }
+  else{
+    return null;
+    }
 };
 
 /* For example,
